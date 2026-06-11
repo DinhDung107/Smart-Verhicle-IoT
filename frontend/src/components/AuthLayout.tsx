@@ -15,6 +15,17 @@ const AuthLayout = () => {
              style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}>
         </div>
         
+        {/* SNS Logo */}
+        <div className="relative z-10 mb-12">
+          <div className="flex items-end">
+            <div className="text-4xl font-serif italic font-bold text-[#F0EAE1] leading-none tracking-tighter">S</div>
+            <div className="text-2xl font-display font-light text-[#C84B31] leading-none mb-1 -ml-1">N</div>
+            <div className="text-4xl font-serif italic font-bold text-[#F0EAE1] leading-none tracking-tighter -ml-1">S</div>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#C84B31] ml-1 mb-1"></div>
+          </div>
+        </div>
+
+        {/* Main Title */}
         <div className="relative z-10">
           <h1 className="text-6xl font-display font-light leading-none tracking-tight">
             <span className="block italic font-serif text-3xl text-[#C84B31] mb-4">{t('sidebar.title1')}</span>
