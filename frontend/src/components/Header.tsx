@@ -1,4 +1,4 @@
-import { User, Activity, LogOut } from 'lucide-react';
+import { Activity, LogOut } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 interface HeaderProps {
