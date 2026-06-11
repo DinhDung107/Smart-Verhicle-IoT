@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --color-brand-wine: #3A1212;
+  --color-brand-sand: #F0EAE1;
+  --color-brand-terracotta: #C84B31;
+  --color-brand-sage: #5D8265;
+  --color-brand-coffee: #3A1212;
+  --color-brand-cream: #F0EAE1;
+
+  --font-sans: 'Archivo Narrow', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+  :root {
+    background-color: var(--color-brand-sand);
+    color: var(--color-brand-coffee);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-sand);
+    color: var(--color-brand-coffee);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+}
+
+@layer components {
+  .editorial-card {
+    background-color: var(--color-brand-cream);
+    border: 1px solid var(--color-brand-coffee);
+    box-shadow: 2px 2px 8px rgba(58, 18, 18, 0.05);
+    border-radius: 2px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .editorial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 12px rgba(58, 18, 18, 0.1);
+  }
+
+  .editorial-button {
+    background-color: var(--color-brand-wine);
+    color: var(--color-brand-cream);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-brand-wine);
+    transition: all 0.3s ease;
+    border-radius: 9999px; /* Pill shape */
+  }
+
+  .editorial-button:hover {
+    background-color: var(--color-brand-terracotta);
+    border-color: var(--color-brand-terracotta);
+    color: var(--color-brand-cream);
+  }
+
+  .editorial-button-outline {
+    background-color: transparent;
+    color: var(--color-brand-coffee);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-brand-coffee);
+    transition: all 0.3s ease;
+    border-radius: 9999px; /* Pill shape */
+  }
+
+  .editorial-button-outline:hover {
+    background-color: var(--color-brand-coffee);
+    color: var(--color-brand-cream);
+  }
+  
+  .editorial-badge {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--color-brand-coffee);
+    border-radius: 9999px;
+    background-color: transparent;
+  }
+
+  /* Skeleton Loading */
+  .skeleton {
+    background: linear-gradient(90deg, rgba(58, 18, 18, 0.05) 25%, rgba(58, 18, 18, 0.1) 50%, rgba(58, 18, 18, 0.05) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 2px;
+  }
+
+  /* Modal Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out forwards;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
